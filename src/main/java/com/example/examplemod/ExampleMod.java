@@ -40,9 +40,10 @@ public class ExampleMod
 
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<Block> cock_block = BLOCKS.register("cock_block", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)));
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-
+    public static final RegistryObject<Item> cock_block_ITEM = ITEMS.register("cock_block", () -> new BlockItem(cock_block.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public ExampleMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
